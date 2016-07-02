@@ -4,9 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Componentes Material Design</title>
-    <link rel="stylesheet" href="components/md-ripple/md-ripple.css">
 
-    <!--  Vendor  -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="components/md-ripple/md-ripple.css">
+    <link rel="stylesheet" href="components/md-button/md-button.css">
+
+    <!--  Vendor Styles -->
+    <link rel="stylesheet" href="vendor/roboto-fontface/css/roboto/roboto-fontface.css">
+
+    <!--  Vendor Scripts -->
     <script src="vendor/jquery/dist/jquery.min.js"></script>
     <script src="vendor/angular/angular.min.js"></script>
     <script src="vendor/angular-animate/angular-animate.min.js"></script>
@@ -22,27 +28,44 @@
         * {
             margin: 0 auto;
             padding: 0 auto;
+            font-family: 'Roboto', cursive;
+            outline: none;
         }
 
         *, *:before, *:after {
             box-sizing: border-box;
         }
 
-        button {
-            padding: 10px 20px;
-            border:0;
-            color: #FFF;
-            position: relative;
-            overflow: hidden;
-            cursor: pointer;
-            background-color: teal;
-        }
 
+        button, a {
+            z-index: 1;
+            cursor: pointer;
+            overflow: hidden;
+            position: relative;
+        }
+        body {
+        }
+        .modal {
+            width: 200px;
+            height: 200px;
+            background-color: #FFF;
+            box-shadow: 0 0 20px 3px rgba(0,0,0,0.3);
+        }
 
 
     </style>
 </head>
 <body>
-    <button md-ripple><strong>MD</strong> RIPPLE</button>
+    <!--  Buttons  -->
+    <div>
+        <button class="md-button-float" md-ripple><i class="material-icons">face</i></button>
+        <button class="md-button-float md-button-float-min" md-ripple><i class="material-icons">face</i></button>
+        <button md-ripple class="md-button md-button-raised">raised</button>
+        <button md-ripple class="md-button md-button-raised default">raised</button>
+        <button md-ripple class="md-button md-button-raised" disabled>raised</button>
+        <button md-ripple class="md-button md-button-flat">button</button>
+        <button md-ripple class="md-button md-button-flat default">button</button>
+        <button md-ripple class="md-button md-button-flat" disabled>button</button>
+    </div>
 </body>
 </html>

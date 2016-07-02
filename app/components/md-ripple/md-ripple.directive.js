@@ -26,8 +26,8 @@
 
                 ripple = angular.element(ripple);
 
-                var left = e.clientX - element.position().left - size;
-                var top = e.clientY - element.position().top - size;
+                var left = e.clientX - element[0].getBoundingClientRect().left - size;
+                var top = e.clientY - element[0].getBoundingClientRect().top - size;
 
                 element.append(ripple);
 
@@ -41,7 +41,7 @@
 
                 $timeout(function(){
                     ripple.removeClass('visible');
-                }, 500);
+                }, 300);
 
 
             });
@@ -55,7 +55,7 @@
                     if(ripples.length) {
                         $timeout(function(){
                             removeRipple(element.find('ripple')[0]);
-                        },500);
+                        },300);
                     }
                     else {
                         removeRipple(element.find('ripple')[0]);
