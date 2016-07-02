@@ -3,6 +3,6 @@
     'use strict';
 
     angular
-        .module('md', []);
+        .module('md', ['md.ripple']);
 
 })();

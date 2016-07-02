@@ -1,19 +1,47 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" ng-app="md">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Componentes Material Design</title>
+    <link rel="stylesheet" href="components/md-ripple/md-ripple.css">
 
     <!--  Vendor  -->
     <script src="vendor/jquery/dist/jquery.min.js"></script>
     <script src="vendor/angular/angular.min.js"></script>
     <script src="vendor/angular-animate/angular-animate.min.js"></script>
 
-    <!--  Components  -->
+    <!--  App  -->
     <script src="js/app.js"></script>
 
+    <!--  Components  -->
+    <script src="components/md-ripple/md-ripple.module.js"></script>
+    <script src="components/md-ripple/md-ripple.directive.js"></script>
+
+    <style>
+        * {
+            margin: 0 auto;
+            padding: 0 auto;
+        }
+
+        *, *:before, *:after {
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px 20px;
+            border:0;
+            color: #FFF;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+
+
+    </style>
 </head>
 <body>
-
+    <button md-ripple><strong>MD</strong> RIPPLE</button>
 </body>
 </html>
