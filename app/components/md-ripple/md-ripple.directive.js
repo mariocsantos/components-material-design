@@ -41,7 +41,7 @@
 
                 $timeout(function(){
                     ripple.removeClass('visible');
-                }, 5000);
+                }, 500);
 
 
             });
@@ -55,7 +55,7 @@
                     if(ripples.length) {
                         $timeout(function(){
                             removeRipple(element.find('ripple')[0]);
-                        },5000);
+                        },500);
                     }
                     else {
                         removeRipple(element.find('ripple')[0]);
