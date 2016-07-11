@@ -46,7 +46,7 @@
 
             });
 
-            angular.element(document).on('mouseup', function () {
+            angular.element(document).on('mouseup touchend', function () {
 
                 var ripples = element.find('ripple');
 

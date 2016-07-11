@@ -3,6 +3,10 @@
     'use strict';
 
     angular
-        .module('md', ['md.ripple']);
+        .module('md', [
+            'md.ripple',
+            'ngAnimate',
+            'ngMessages'
+        ]);
 
 })();

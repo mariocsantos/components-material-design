@@ -25,11 +25,11 @@
 /*  Button Raised  */
 .md-button-raised {
   color: #fff;
-  background-color: #009688;
+  background-color: #3f51b5;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3), 0 2px 6px rgba(0, 0, 0, 0.15); }
 
 .md-button-raised:hover, .md-button-raised:focus {
-  background-color: rgba(0, 150, 136, 0.88);
+  background-color: rgba(63, 81, 181, 0.88);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 4px 12px rgba(0, 0, 0, 0.15); }
 
 .md-button-raised:active {
@@ -44,10 +44,10 @@
 /*  Button Flat  */
 .md-button-flat {
   color: #fff;
-  background-color: #009688; }
+  background-color: #3f51b5; }
 
 .md-button-flat:hover, .md-button-flat:focus {
-  background-color: rgba(0, 150, 136, 0.88); }
+  background-color: rgba(63, 81, 181, 0.88); }
 
 .md-button-flat:disabled {
   cursor: default;
@@ -67,7 +67,7 @@
   border-radius: 50%;
   color: #fff;
   transition: all 200ms ease-in-out;
-  background-color: #009688;
+  background-color: #3f51b5;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3), 0 6px 18px rgba(0, 0, 0, 0.15); }
 
 .md-button-float:hover, .md-button-float:focus {
@@ -77,7 +77,7 @@
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3), 0 12px 36px rgba(0, 0, 0, 0.15); }
 
 .md-button-float:hover {
-  background-color: #00897b; }
+  background-color: #3949ab; }
 
 .md-button-float-min {
   width: 40px;
