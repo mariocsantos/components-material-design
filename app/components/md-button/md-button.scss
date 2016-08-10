@@ -1,6 +1,6 @@
 @import "../../vendor/sass-material-colors/sass/sass-material-colors";
 
-$color-primary: 'indigo';
+$color-primary: 'blue';
 $color-reverse: #fff;
 
 .md-button {
@@ -13,98 +13,124 @@ $color-reverse: #fff;
   text-transform: uppercase;
   transition: all 200ms ease-in-out;
   font-family: 'Roboto-Medium', cursive;
-}
-
-.md-button.default {
-  color: #000;
   background-color: transparent;
+  color: material-color($color-primary);
+
+  &:hover, &:focus {
+    background-color: rgba(153, 153, 153, 0.2);
+  }
+
+  &:active {
+    background-color: rgba(153, 153, 153, 0.4);
+  }
+
+  & ripple {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  &:disabled,
+  &:disabled:hover,
+  &:disabled:focus,
+  &:disabled:active {
+    cursor: default;
+    color: rgba(0,0,0,0.26);
+    background-color: transparent;
+    box-shadow: none !important;
+  }
 }
 
-.md-button.default:hover, .md-button.default:focus {
-  background-color: rgba(153, 153, 153, 0.2);
-}
-
-.md-button.default:active {
-  background-color: rgba(153, 153, 153, 0.4);
-}
-
-.md-button.default ripple {
-  background-color: rgba(0, 0, 0, 0.25);
-}
-
-/*  Button Raised  */
-
-.md-button-raised {
-  color: $color-reverse;
+.md-button.fill {
   background-color: material-color($color-primary);
+  color: $color-reverse;
+
+  & ripple {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  &:hover, &:focus {
+    background-color: rgba(material-color($color-primary), 0.88);
+  }
+
+  &:disabled,
+  &:disabled:hover,
+  &:disabled:focus,
+  &:disabled:active {
+    color: rgba(0,0,0,0.26);
+    background-color: rgba(0,0,0,0.12);
+  }
+}
+
+.md-button.raised {
   box-shadow: 0 2px 4px rgba(0,0,0,0.3), 0 2px 6px rgba(0,0,0,0.15);
+
+  &:hover, &:focus {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3), 0 4px 12px rgba(0,0,0,0.15);
+  }
+
+  &:active {
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3), 0 8px 24px rgba(0,0,0,0.15);
+  }
+
 }
 
-.md-button-raised:hover, .md-button-raised:focus {
-  background-color: rgba(material-color($color-primary), 0.88);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3), 0 4px 12px rgba(0,0,0,0.15);
+.md-button.fab {
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3), 0 6px 18px rgba(0,0,0,0.15);
+
+  &:hover, &:focus {
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3), 0 8px 24px rgba(0,0,0,0.15);
+  }
+
+  &:active {
+    box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 12px 36px rgba(0,0,0,0.15);
+  }
 }
 
-.md-button-raised:active {
-  box-shadow: 0 8px 16px rgba(0,0,0,0.3), 0 8px 24px rgba(0,0,0,0.15);
-}
-
-.md-button-raised:disabled, .md-button-raised:disabled:hover, .md-button-raised:disabled:focus, .md-button-raised:disabled:active {
-  cursor: default;
-  box-shadow: none;
-  color: rgba(0,0,0,0.26);
-  background-color: rgba(0,0,0,0.12);
-}
-
-/*  Button Flat  */
-
-.md-button-flat {
-  color: $color-reverse;
-  background-color: material-color($color-primary);
-}
-
-.md-button-flat:hover, .md-button-flat:focus {
-  background-color: rgba(material-color($color-primary), 0.88);
-}
-
-.md-button-flat:disabled {
-  cursor: default;
-  color: rgba(0,0,0,0.4);
-}
-
-.md-button-flat:disabled, .md-button-flat:disabled:hover, .md-button-flat:disabled:focus, .md-button-raised:disabled:active {
-  cursor: default;
-  color: rgba(0,0,0,0.26);
-  background-color: transparent;
-}
-
-/*  Button Float  */
-
-.md-button-float {
+.md-button.icon {
   border:0;
   padding: 0;
   width: 56px;
   height: 56px;
+  min-width: 0;
   border-radius: 50%;
-  color: $color-reverse;
-  transition: all 200ms ease-in-out;
-  background-color: material-color($color-primary);
-  box-shadow: 0 6px 12px rgba(0,0,0,0.3), 0 6px 18px rgba(0,0,0,0.15);
 }
 
-.md-button-float:hover, .md-button-float:focus {
-  box-shadow: 0 8px 16px rgba(0,0,0,0.3), 0 8px 24px rgba(0,0,0,0.15);
-}
-
-.md-button-float:active {
-  box-shadow: 0 12px 24px rgba(0,0,0,0.3), 0 12px 36px rgba(0,0,0,0.15);
-}
-
-.md-button-float:hover {
-  background-color: material-color($color-primary, '600');
-}
-
-.md-button-float-min {
+.md-button.icon.small {
   width: 40px;
   height: 40px;
+}
+
+.md-button.icon i {
+  line-height: 40px;
+}
+
+.md-button.icon:not(.fab):not(.fill) {
+  overflow: inherit;
+  position: relative;
+
+  &:active,
+  &:focus,
+  &:hover {
+    background-color: transparent;
+  }
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    z-index: -1;
+    background-color: rgba(158,158,158,0.2);
+    transition: all 200ms ease-in-out;
+    transform: scale(0);
+  }
+}
+
+.md-button.icon:not(.fab):not(.fill):active {
+  &:before {
+    transform: scale(1);
+  }
 }
