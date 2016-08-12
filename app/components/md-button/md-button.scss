@@ -1,6 +1,6 @@
 @import "../../vendor/sass-material-colors/sass/sass-material-colors";
 
-$color-primary: 'blue';
+$color-primary: 'indigo';
 $color-reverse: #fff;
 
 .md-button {
@@ -110,7 +110,7 @@ $color-reverse: #fff;
   &:active,
   &:focus,
   &:hover {
-    background-color: transparent;
+    background-color: #FAFAFA;
   }
 
   &:before {
