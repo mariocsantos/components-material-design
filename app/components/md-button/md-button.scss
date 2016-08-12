@@ -1,7 +1,4 @@
-@import "../../vendor/sass-material-colors/sass/sass-material-colors";
-
-$color-primary: 'indigo';
-$color-reverse: #fff;
+@import "../variables";
 
 .md-button {
   border: 0;

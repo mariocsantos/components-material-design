@@ -8,6 +8,7 @@
  * @param {string} [color-variant='500']  - quoted, lowercase color variant (e.g.
  *                                          '200', 'a100')
  */
+/* Colors */
 .md-button {
   border: 0;
   height: 36px;
@@ -19,7 +20,7 @@
   transition: all 200ms ease-in-out;
   font-family: 'Roboto-Medium', cursive;
   background-color: transparent;
-  color: #3f51b5; }
+  color: #009688; }
   .md-button:hover, .md-button:focus {
     background-color: rgba(153, 153, 153, 0.2); }
   .md-button:active {
@@ -33,12 +34,12 @@
     box-shadow: none !important; }
 
 .md-button.fill {
-  background-color: #3f51b5;
+  background-color: #009688;
   color: #fff; }
   .md-button.fill ripple {
     background-color: rgba(255, 255, 255, 0.1); }
   .md-button.fill:hover, .md-button.fill:focus {
-    background-color: rgba(63, 81, 181, 0.88); }
+    background-color: rgba(0, 150, 136, 0.88); }
   .md-button.fill:disabled, .md-button.fill:disabled:hover, .md-button.fill:disabled:focus, .md-button.fill:disabled:active {
     color: rgba(0, 0, 0, 0.26);
     background-color: rgba(0, 0, 0, 0.12); }
