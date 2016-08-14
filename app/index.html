@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="components/md-ripple/md-ripple.css">
     <link rel="stylesheet" href="components/md-button/md-button.css">
+    <link rel="stylesheet" href="components/md-field/md-field.css">
 
     <!--  Vendor Styles  -->
     <link rel="stylesheet" href="vendor/roboto-fontface/css/roboto/roboto-fontface.css">
@@ -24,9 +25,11 @@
     <!--  Components  -->
     <script src="components/md-ripple/md-ripple.module.js"></script>
     <script src="components/md-button/md-button.module.js"></script>
+    <script src="components/md-field/md-field.module.js"></script>
 
     <script src="components/md-ripple/md-ripple.directive.js"></script>
     <script src="components/md-button/md-button.directive.js"></script>
+    <script src="components/md-field/md-field.directive.js"></script>
 
     <style>
         * {
@@ -71,5 +74,36 @@
         <md-button md-ripple class="raised">button</md-button>
         <md-button md-ripple class="fill raised" disabled>raised</md-button>
     </div>
+
+    <form name="form" style="margin: 40px auto; width: 300px">
+        <md-field>
+            <input name="field" type="text" ng-model="field" required>
+            <label class="required">Field</label>
+            <ng-messages for="form.field.$error" ng-if="form.field.$dirty && form.field.$error">
+                <ng-message when="required">Insira um texto.</ng-message>
+            </ng-messages>
+        </md-field>
+        <md-field>
+            <select name="select" type="text" ng-model="select" required>
+                <option></option>
+                <option value="1">TESTE1</option>
+                <option value="2">TESTE2</option>
+                <option value="3">TESTE3</option>
+                <option value="4">TESTE4</option>
+            </select>
+            <label class="required">Field</label>
+            <ng-messages for="form.select.$error" ng-if="form.select.$dirty && form.select.$error">
+                <ng-message when="required">Insira um texto.</ng-message>
+            </ng-messages>
+        </md-field>
+        <md-field>
+            <textarea name="textarea" type="text" ng-model="textarea" required rows="3">
+            </textarea>
+            <label class="required">Field</label>
+            <ng-messages for="form.textarea.$error" ng-if="form.textarea.$dirty && form.textarea.$error">
+                <ng-message when="required">Insira um texto.</ng-message>
+            </ng-messages>
+        </md-field>
+    </form>
 </body>
 </html>
