@@ -1,0 +1,20 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+    outline: none;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', cursive;
+}
+
+button, a {
+    z-index: 1;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+}
