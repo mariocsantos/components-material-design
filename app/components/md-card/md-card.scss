@@ -1,0 +1,71 @@
+@import "../variables";
+
+md-card {
+  border-radius: 2px;
+  background-color: #FFF;
+  display: block;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3), 0 2px 6px rgba(0,0,0,0.15);
+  transition: all 200ms ease-in-out;
+}
+
+md-card.raised {
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3), 0 8px 24px rgba(0,0,0,0.15);
+}
+
+md-card.full-space {
+  padding: 5px;
+}
+
+md-card.height-space {
+  padding: 5px 0;
+}
+
+md-card.width-space {
+  padding: 0 5px;
+}
+
+md-card-title {
+  font-family: 'Roboto-Medium', sans-serif;
+  padding: 16px 16px 0 16px;
+  font-size: 24px;
+  display: block;
+}
+
+md-card-title .subtitle {
+  font-family: 'Roboto', sans-serif;
+  color: rgba(0,0,0,0.4);
+  font-size: 14px;
+}
+
+md-card-content {
+  display: block;
+  padding: 16px 16px 8px 16px;
+}
+
+md-card-content .supporting {
+  font-size: 14px;
+  color: rgba(0,0,0,0.4);
+}
+
+md-card-control {
+  display: flex;
+  align-items: center;
+  padding: 4px;
+}
+
+md-card-control:not(.not-control) {
+  justify-content: space-between;
+}
+
+md-card-control {
+  justify-content: flex-end;
+}
+
+md-card-control > div {
+  display: flex;
+}
+
+md-card-control .md-button {
+  margin: 4px;
+}

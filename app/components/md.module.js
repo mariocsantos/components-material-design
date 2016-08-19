@@ -7,6 +7,7 @@
             'md.ripple',
             'md.button',
             'md.field',
+            'md.card',
             'ngAnimate',
             'ngMessages'
         ]);

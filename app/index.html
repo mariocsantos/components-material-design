@@ -6,9 +6,11 @@
     <title>Components Material Design</title>
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="components/md.css">
     <link rel="stylesheet" href="components/md-ripple/md-ripple.css">
     <link rel="stylesheet" href="components/md-button/md-button.css">
     <link rel="stylesheet" href="components/md-field/md-field.css">
+    <link rel="stylesheet" href="components/md-card/md-card.css">
 
     <!--  Vendor Styles  -->
     <link rel="stylesheet" href="vendor/roboto-fontface/css/roboto/roboto-fontface.css">
@@ -26,10 +28,12 @@
     <script src="components/md-ripple/md-ripple.module.js"></script>
     <script src="components/md-button/md-button.module.js"></script>
     <script src="components/md-field/md-field.module.js"></script>
+    <script src="components/md-card/md-card.module.js"></script>
 
     <script src="components/md-ripple/md-ripple.directive.js"></script>
     <script src="components/md-button/md-button.directive.js"></script>
     <script src="components/md-field/md-field.directive.js"></script>
+    <script src="components/md-card/md-card.directive.js"></script>
 </head>
 <body>
     <div>
@@ -80,5 +84,21 @@
             </ng-messages>
         </md-field>
     </form>
+
+    <div style="width: 350px; margin: 40px auto">
+        <md-card>
+            <md-card-title>
+                Card material
+                <div class="subtitle">Subtitle</div>
+            </md-card-title>
+            <md-card-content>
+                <div class="supporting">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet illo iusto laborum perferendis sit, sunt? Accusamus commodi facilis harum, ipsam iusto labore natus nesciunt numquam quidem quisquam quo tempore tenetur!</div>
+            </md-card-content>
+            <md-card-control class="not-control">
+                <md-button md-ripple>Cancel</md-button>
+                <md-button md-ripple>I Agree</md-button>
+            </md-card-control>
+        </md-card>
+    </div>
 </body>
 </html>
