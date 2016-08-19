@@ -61,17 +61,25 @@
 .md-button.icon {
   border: 0;
   padding: 0;
-  width: 56px;
-  height: 56px;
   min-width: 0;
   border-radius: 50%; }
 
-.md-button.icon.small {
+.md-button.icon > div[ng-transclude] {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.md-button.icon, .md-button.icon > div[ng-transclude] {
+  width: 56px;
+  height: 56px; }
+
+.md-button.icon.small, .md-button.icon.small > div[ng-transclude] {
   width: 40px;
   height: 40px; }
 
-.md-button.icon i {
-  line-height: 40px; }
+.md-button.icon.xsmall, .md-button.icon.xsmall > div[ng-transclude] {
+  width: 36px;
+  height: 36px; }
 
 .md-button.icon:not(.fab):not(.fill) {
   overflow: inherit;
