@@ -14,19 +14,19 @@ md-card-wrap {
   transition: all 200ms ease-in-out;
 }
 
-md-card-wrap.raised {
+md-card.raised md-card-wrap {
   box-shadow: 0 8px 16px rgba(0,0,0,0.3), 0 8px 24px rgba(0,0,0,0.15);
 }
 
-md-card-wrap.full-space {
+md-card.full-space md-card-wrap{
   padding: 5px;
 }
 
-md-card-wrap.height-space {
+md-card.height-space md-card-wrap{
   padding: 5px 0;
 }
 
-md-card-wrap.width-space {
+md-card.width-space md-card-wrap{
   padding: 0 5px;
 }
 
