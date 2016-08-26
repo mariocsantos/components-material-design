@@ -1,10 +1,22 @@
-ripple {
+.ripples-container {
+    z-index: 1;
+    overflow: hidden;
+    position: relative;
+}
+
+.ripples-container > ripple {
     position: absolute;
+    z-index: 2;
     border-radius: 50%;
     transform: scale(0);
     animation: ripple 0.5s cubic-bezier(.52,.45,.66,1.03);
     animation-fill-mode: forwards;
     background-color: rgba(255, 255, 255, 0.2);
+}
+
+.ripples-container > * {
+    position: relative;
+    z-index: 3;
 }
 
 @keyframes ripple {

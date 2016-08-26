@@ -11,12 +11,15 @@
     function mdRipple ($timeout) {
 
         var directive = {
+            restrict: 'A',
             link: link
         };
 
         return directive;
 
         function link (scope, element) {
+
+            element.addClass('ripples-container');
 
             element.on('mousedown', function (e) {
 
