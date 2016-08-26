@@ -1,6 +1,11 @@
 @import "../variables";
 
 md-card {
+  display: block;
+  padding: 15px;
+}
+
+md-card-wrap {
   border-radius: 2px;
   background-color: #FFF;
   display: block;
@@ -9,19 +14,19 @@ md-card {
   transition: all 200ms ease-in-out;
 }
 
-md-card.raised {
+md-card-wrap.raised {
   box-shadow: 0 8px 16px rgba(0,0,0,0.3), 0 8px 24px rgba(0,0,0,0.15);
 }
 
-md-card.full-space {
+md-card-wrap.full-space {
   padding: 5px;
 }
 
-md-card.height-space {
+md-card-wrap.height-space {
   padding: 5px 0;
 }
 
-md-card.width-space {
+md-card-wrap.width-space {
   padding: 0 5px;
 }
 

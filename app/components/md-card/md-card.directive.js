@@ -10,7 +10,9 @@
     
     function mdCard() {
         var directive = {
-            restrict: 'E'
+            restrict: 'E',
+            template: '<md-card-wrap ng-transclude></md-card-wrap>',
+            transclude: true
         };
         
         return directive;
