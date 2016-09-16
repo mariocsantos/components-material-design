@@ -8,6 +8,7 @@
             'md.button',
             'md.field',
             'md.card',
+            'md.dialog',
             'ngAnimate',
             'ngMessages'
         ]);

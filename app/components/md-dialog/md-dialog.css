@@ -1,0 +1,52 @@
+/**
+ * Retrieves a color value from the $material-colors Sass map
+ * Inspired by https://github.com/nilskaspersson/Google-Material-UI-Color-Palette/
+ *
+ * @function
+ * @param {string} color-name             - quoted, lower-case, dasherized color
+ *                                          name (e.g. 'pink', 'amber')
+ * @param {string} [color-variant='500']  - quoted, lowercase color variant (e.g.
+ *                                          '200', 'a100')
+ */
+/* Colors */
+md-dialog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  overflow-y: auto;
+  transition: transform 400ms ease-in-out, opacity 200ms ease-in-out; }
+
+md-dialog-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1; }
+
+md-dialog-content {
+  margin: auto;
+  display: block;
+  max-width: 100%;
+  transition: all 200ms 200ms ease-in-out; }
+
+md-dialog.ng-enter, md-dialog.ng-leave-active {
+  opacity: 0;
+  overflow: hidden; }
+
+md-dialog.ng-leave {
+  transition: transform 600ms ease-in-out, opacity 200ms 200ms ease-in-out; }
+
+md-dialog.ng-leave md-dialog-content {
+  transition: all 200ms ease-in-out; }
+
+md-dialog.ng-enter md-dialog-content,
+md-dialog.ng-leave-active md-dialog-content {
+  transform: scale(0); }
+
+/*# sourceMappingURL=md-dialog.css.map */
