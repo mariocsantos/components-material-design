@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="components/md-button/md-button.css">
     <link rel="stylesheet" href="components/md-field/md-field.css">
     <link rel="stylesheet" href="components/md-card/md-card.css">
+    <link rel="stylesheet" href="components/md-dialog/md-dialog.css">
 
     <!--  Vendor Styles  -->
     <link rel="stylesheet" href="vendor/roboto-fontface/css/roboto/roboto-fontface.css">
@@ -29,15 +30,38 @@
     <script src="components/md-button/md-button.module.js"></script>
     <script src="components/md-field/md-field.module.js"></script>
     <script src="components/md-card/md-card.module.js"></script>
+    <script src="components/md-dialog/md-dialog.module.js"></script>
 
     <script src="components/md-ripple/md-ripple.directive.js"></script>
     <script src="components/md-button/md-button.directive.js"></script>
     <script src="components/md-field/md-field.directive.js"></script>
     <script src="components/md-card/md-card.directive.js"></script>
+    <script src="components/md-dialog/md-dialog.directive.js"></script>
+
+    <script>
+        (function () {
+
+            'use strict';
+
+            angular.module('md').controller('TestController', TestController);
+
+            function TestController() {
+                var vm = this;
+
+                vm.openDialog = function () {
+                    vm.dialogActive = true;
+                };
+
+                vm.closeDialog = function () {
+                    delete vm.dialogActive;
+                };
+            }
+        })();
+    </script>
 </head>
-<body>
+<body ng-controller="TestController as vm">
     <div>
-        <md-button md-ripple class="fill icon fab">
+        <md-button md-ripple class="fill icon fab" ng-click="vm.openDialog()">
             <i class="material-icons">add</i>
         </md-button>
         <md-button md-ripple class="fill icon">
@@ -84,6 +108,22 @@
             </ng-messages>
         </md-field>
     </form>
+
+    <md-dialog background-click="vm.closeDialog()" ng-if="vm.dialogActive">
+        <md-card class="raised">
+            <md-card-title>
+                Card material
+                <div class="subtitle">Subtitle</div>
+            </md-card-title>
+            <md-card-content>
+                <div class="supporting">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet illo iusto laborum perferendis sit, sunt? Accusamus commodi facilis harum, ipsam iusto labore natus nesciunt numquam quidem quisquam quo tempore tenetur!</div>
+            </md-card-content>
+            <md-card-control class="not-control">
+                <md-button md-ripple ng-click="vm.closeDialog()">Cancel</md-button>
+                <md-button md-ripple>I Agree</md-button>
+            </md-card-control>
+        </md-card>
+    </md-dialog>
 
     <div style="width: 350px; margin: 40px auto">
         <md-card>
